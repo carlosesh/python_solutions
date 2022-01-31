@@ -41,15 +41,9 @@ Notes
 def find_occurrences(txt, ch):
     occurrences = {}
 
-    # populate dictionary
     for i in txt.lower().split():
         if i not in occurrences:
-            occurrences[i] = (0)
-
-    for k, v in occurrences.items():
-        lower_ch = ch.lower()
-        if lower_ch in k:
-            occurrences[k] = occurrences.get(k) + k.count(lower_ch)
+            occurrences[i] = (0) + i.count(ch.lower())
 
     return occurrences
 
