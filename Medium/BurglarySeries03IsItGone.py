@@ -34,6 +34,8 @@ items = { } ➞ "Timmy is here!"
 """
 def find_it(items, name):
     name_title = name.title()
+    if not items:
+            return f"{name_title} is here!"
     return f"{name_title} is gone..." if name in items.keys() else f"{name_title} is here!"
 
 
@@ -63,6 +65,8 @@ class BurglarySeries03IsItGone(unittest.TestCase):
           "stereo": 50,
         	"batman": 200,
         }, "batman"),"Batman is gone...")
+
+        self.assertEqual(find_it({}, "batman"),"Batman is here!")
 
 
 if __name__ == '__main__':
