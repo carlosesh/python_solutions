@@ -42,6 +42,8 @@ and {1, 2, 4, 8} to be the same set.
 the answers will always have the order given by applying the list(),
 tuple(), set() functions.
 """
+
+
 def convert(data1, data2):
     if type(data1) == type(data2):
         return data2
@@ -52,17 +54,22 @@ def convert(data1, data2):
     else:
         return set(data2)
 
+
 class WhichOneIsYourType(unittest.TestCase):
     def test_convert(self):
         self.assertEqual(convert([1, 2, 4, 8], [1, 2, 4, 8]), [1, 2, 4, 8])
         self.assertEqual(convert([1, 2, 4, 8], (7, 8, 9)), [7, 8, 9])
-        self.assertEqual(convert([1, 2, 4, 8], {2, 3, 5, 7, 11, 13}), [2, 3, 5, 7, 11, 13])
+        self.assertEqual(convert([1, 2, 4, 8], {2, 3, 5, 7, 11, 13}), [
+                         2, 3, 5, 7, 11, 13])
         self.assertEqual(convert((7, 8, 9), (7, 8, 9)), (7, 8, 9))
         self.assertEqual(convert((7, 8, 9), [1, 2, 4, 8]), (1, 2, 4, 8))
-        self.assertEqual(convert((7, 8, 9), {2, 3, 5, 7, 11, 13}), (2, 3, 5, 7, 11, 13))
-        self.assertEqual(convert({2, 3, 5, 7, 11, 13}, [1, 2, 4, 8]), {8, 1, 2, 4})
+        self.assertEqual(
+            convert((7, 8, 9), {2, 3, 5, 7, 11, 13}), (2, 3, 5, 7, 11, 13))
+        self.assertEqual(convert({2, 3, 5, 7, 11, 13}, [
+                         1, 2, 4, 8]), {8, 1, 2, 4})
         self.assertEqual(convert({2, 3, 5, 7, 11, 13}, (7, 8, 9)), {8, 9, 7})
-        self.assertEqual(convert({2, 3, 5, 7, 11, 13}, {2, 3, 5, 7, 11, 13}), {2, 3, 5, 7, 11, 13})
+        self.assertEqual(convert({2, 3, 5, 7, 11, 13}, {
+                         2, 3, 5, 7, 11, 13}), {2, 3, 5, 7, 11, 13})
 
 
 if __name__ == '__main__':

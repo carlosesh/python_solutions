@@ -18,6 +18,8 @@ Notes
 Must return a tuple.
 255 is the max value of a single color channel.
 """
+
+
 def color_invert(rgb):
     return (get_rgb(255 - rgb[0]), get_rgb(255 - rgb[1]), get_rgb(255 - rgb[2]))
 

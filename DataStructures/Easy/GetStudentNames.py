@@ -19,22 +19,24 @@ Notes
 * If you're really stuck, unlock solutions in the Solutions tab.
 """
 
+
 def get_student_names(students):
     return sorted(students.values())
+
 
 class GetStudentNames(unittest.TestCase):
     def test_get_student_names(self):
         self.assertEqual(get_student_names({
-        	"Student 1":"Steve",
-        	"Student 2":"Becky",
-        	"Student 3":"John"
+            "Student 1": "Steve",
+            "Student 2": "Becky",
+            "Student 3": "John"
         }), ["Becky", "John", "Steve"])
 
         self.assertEqual(get_student_names({
-        	"Student 1":"Jacek",
-        	"Student 2":"Ewa",
-        	"Student 3":"Zygmunt",
-        	"Student 4":"Tomek"
+            "Student 1": "Jacek",
+            "Student 2": "Ewa",
+            "Student 3": "Zygmunt",
+            "Student 4": "Tomek"
         }), ["Ewa", "Jacek", "Tomek", "Zygmunt"])
 
 

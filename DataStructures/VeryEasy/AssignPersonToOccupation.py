@@ -30,6 +30,8 @@ the person's job in the jobs list, as shown in the table above.
 * Check Resources for some useful information that can help with this
 challenge.
 """
+
+
 def assign_person_to_job(names, jobs):
     return dict(zip(names, jobs))
 
@@ -38,7 +40,8 @@ class AssignPersonToOccupation(unittest.TestCase):
     def test_assign_person_to_job(self):
         pl = ["Annie", "Steven", "Lisa", "Osman"]
         jl = ["Teacher", "Engineer", "Doctor", "Cashier"]
-        self.assertEqual(assign_person_to_job(pl, jl), {'Annie': 'Teacher', 'Steven': 'Engineer', 'Lisa': 'Doctor', 'Osman': 'Cashier'})
+        self.assertEqual(assign_person_to_job(pl, jl), {
+                         'Annie': 'Teacher', 'Steven': 'Engineer', 'Lisa': 'Doctor', 'Osman': 'Cashier'})
 
 
 if __name__ == '__main__':

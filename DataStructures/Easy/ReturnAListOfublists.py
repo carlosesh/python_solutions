@@ -20,6 +20,8 @@ Notes
 The first two arguments will always be integers.
 The third argument is either a string or an integer.
 """
+
+
 def matrix(x, y, z):
     sublists = []
     for i in range(x):
@@ -27,9 +29,11 @@ def matrix(x, y, z):
 
     return sublists
 
+
 class ReturnAListOfublists(unittest.TestCase):
     def test_matrix(self):
-        self.assertEqual(matrix(3, 4, 0), [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
+        self.assertEqual(matrix(3, 4, 0), [
+                         [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
         self.assertEqual(matrix(2, 3, "#"), [["#", "#", "#"], ["#", "#", "#"]])
         self.assertEqual(matrix(2, 3, -4), [[-4, -4, -4], [-4, -4, -4]])
         self.assertEqual(matrix(1, 2, 0), [[0, 0]])

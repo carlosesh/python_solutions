@@ -19,8 +19,9 @@ Each word will contain at least one letter.
 All words will be lower cased.
 """
 
+
 def count_unique(s1, s2):
-    return len(set(s1+s2))
+    return len(set(s1 + s2))
 
 
 class TotalNumberOfUniqueCharacters(unittest.TestCase):
@@ -30,6 +31,7 @@ class TotalNumberOfUniqueCharacters(unittest.TestCase):
         self.assertEqual(count_unique("pip", "geeks"), 6)
         self.assertEqual(count_unique("a", "soup"), 5)
         self.assertEqual(count_unique("maniac", "maniac"), 5)
+
 
 if __name__ == '__main__':
     unittest.main()

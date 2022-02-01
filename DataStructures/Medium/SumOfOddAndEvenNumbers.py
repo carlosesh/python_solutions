@@ -19,6 +19,7 @@ Notes
 Count 0 as an even number.
 """
 
+
 def sum_odd_and_even(lst):
     even = 0
     odd = 0
@@ -32,7 +33,8 @@ def sum_odd_and_even(lst):
 
 
 def sum_odd_and_even_list_comprehension(lst):
-    return [sum([x for x in lst if x %2 == 0]), sum([x for x in lst if x %2 != 0])]
+    return [sum([x for x in lst if x % 2 == 0]), sum([x for x in lst if x % 2 != 0])]
+
 
 class SumOfOddAndEvenNumbers(unittest.TestCase):
     def test_sum_odd_and_even(self):
@@ -42,8 +44,10 @@ class SumOfOddAndEvenNumbers(unittest.TestCase):
         self.assertEqual(sum_odd_and_even([]), [0, 0])
 
     def test_sum_odd_and_even_list_comprehension(self):
-        self.assertEqual(sum_odd_and_even_list_comprehension([1, 2, 3, 4, 5, 6]), [12, 9])
-        self.assertEqual(sum_odd_and_even_list_comprehension([-1, -2, -3, -4, -5, -6]), [-12, -9])
+        self.assertEqual(sum_odd_and_even_list_comprehension(
+            [1, 2, 3, 4, 5, 6]), [12, 9])
+        self.assertEqual(sum_odd_and_even_list_comprehension(
+            [-1, -2, -3, -4, -5, -6]), [-12, -9])
         self.assertEqual(sum_odd_and_even_list_comprehension([0, 0]), [0, 0])
         self.assertEqual(sum_odd_and_even_list_comprehension([]), [0, 0])
 

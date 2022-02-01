@@ -19,18 +19,19 @@ Notes
 * If you're really stuck, unlock solutions in the Solutions tab.
 """
 
+
 def tri_area(base, height):
-	return (base * height) / 2
+    return (base * height) / 2
 
 
 class AreaOfATriangle(unittest.TestCase):
-	def test_tri_area(self):
-		self.assertEqual(tri_area(3, 2), 3)
-		self.assertEqual(tri_area(5, 4), 10)
-		self.assertEqual(tri_area(10, 10), 50)
-		self.assertEqual(tri_area(0, 60), 0)
-		self.assertEqual(tri_area(12, 11), 66)
+    def test_tri_area(self):
+        self.assertEqual(tri_area(3, 2), 3)
+        self.assertEqual(tri_area(5, 4), 10)
+        self.assertEqual(tri_area(10, 10), 50)
+        self.assertEqual(tri_area(0, 60), 0)
+        self.assertEqual(tri_area(12, 11), 66)
 
 
 if __name__ == '__main__':
-	unittest.main()
+    unittest.main()

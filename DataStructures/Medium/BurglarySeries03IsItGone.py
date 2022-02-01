@@ -32,41 +32,43 @@ Examples
 items = { } ➞ "Timmy is here!"
 # Timmy is not in the dictionary.
 """
+
+
 def find_it(items, name):
     name_title = name.title()
     if not items:
-            return f"{name_title} is here!"
+        return f"{name_title} is here!"
     return f"{name_title} is gone..." if name in items.keys() else f"{name_title} is here!"
 
 
 class BurglarySeries03IsItGone(unittest.TestCase):
     def test_find_it(self):
-        self.assertEqual(find_it({}, "rambo"),"Rambo is here!")
-        self.assertEqual(find_it({}, "heman"),"Heman is here!")
+        self.assertEqual(find_it({}, "rambo"), "Rambo is here!")
+        self.assertEqual(find_it({}, "heman"), "Heman is here!")
 
         self.assertEqual(find_it({
-          "tv": 30,
-          "stereo": 50,
-        }, "rocky"),"Rocky is here!")
+            "tv": 30,
+            "stereo": 50,
+        }, "rocky"), "Rocky is here!")
 
         self.assertEqual(find_it({
-          "tv": 30,
-          "stereo": 50,
-        }, "spiderman"),"Spiderman is here!")
+            "tv": 30,
+            "stereo": 50,
+        }, "spiderman"), "Spiderman is here!")
 
         self.assertEqual(find_it({
-          "tv": 30,
-          "stereo": 50,
-        	"julius": 100,
-        }, "julius"),"Julius is gone...")
+            "tv": 30,
+            "stereo": 50,
+            "julius": 100,
+        }, "julius"), "Julius is gone...")
 
         self.assertEqual(find_it({
-          "tv": 30,
-          "stereo": 50,
-        	"batman": 200,
-        }, "batman"),"Batman is gone...")
+            "tv": 30,
+            "stereo": 50,
+            "batman": 200,
+        }, "batman"), "Batman is gone...")
 
-        self.assertEqual(find_it({}, "batman"),"Batman is here!")
+        self.assertEqual(find_it({}, "batman"), "Batman is here!")
 
 
 if __name__ == '__main__':

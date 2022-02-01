@@ -27,6 +27,7 @@ Notes
 All inputs will be valid strings.
 """
 
+
 def rps(p1, p2):
     if p1 == "Rock" and p2 == "Scissors":
         return "The winner is p1"

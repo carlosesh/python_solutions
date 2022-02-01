@@ -15,9 +15,12 @@ dis(100, 75) ➞ 25
 Notes
 Your answer should be rounded to two decimal places.
 """
+
+
 def discount(price, discount):
-    result = price - (price*(discount/100))
+    result = price - (price * (discount / 100))
     return round(result, 2)
+
 
 class FindTheDiscount(unittest.TestCase):
     def test_discount(self):

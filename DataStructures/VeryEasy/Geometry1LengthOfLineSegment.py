@@ -18,6 +18,8 @@ The order of the given numbers is X, Y.
 This challenge is easier than it looks.
 Round your result to two decimal places.
 """
+
+
 def line_length(dot1, dot2):
     return round(math.sqrt(pow(dot2[0] - dot1[0], 2) + pow(dot2[1] - dot1[1], 2)), 2)
 

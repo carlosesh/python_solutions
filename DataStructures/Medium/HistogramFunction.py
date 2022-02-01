@@ -31,6 +31,7 @@ Notes
 For better understanding try printing out the result.
 """
 
+
 def histogram(lst, char):
     histogram_string = ""
     separator = "\n"
@@ -41,22 +42,29 @@ def histogram(lst, char):
 
     return histogram_string
 
+
 def histogram_list_comprehension(lst, char):
     return "\n".join(char * x for x in lst)
 
 
 class HistogramFunction(unittest.TestCase):
     def test_histogram(self):
-        self.assertEqual(histogram([2,4,5,6], "o"), 'oo\noooo\nooooo\noooooo')
-        self.assertEqual(histogram([4,2], "*"), '****\n**')
-        self.assertEqual(histogram([20,1,12], "H"), 'HHHHHHHHHHHHHHHHHHHH\nH\nHHHHHHHHHHHH')
-        self.assertEqual(histogram([2,1,2,4,5,2,3], "#"), '##\n#\n##\n####\n#####\n##\n###')
+        self.assertEqual(histogram([2, 4, 5, 6], "o"),
+                         'oo\noooo\nooooo\noooooo')
+        self.assertEqual(histogram([4, 2], "*"), '****\n**')
+        self.assertEqual(histogram([20, 1, 12], "H"),
+                         'HHHHHHHHHHHHHHHHHHHH\nH\nHHHHHHHHHHHH')
+        self.assertEqual(
+            histogram([2, 1, 2, 4, 5, 2, 3], "#"), '##\n#\n##\n####\n#####\n##\n###')
 
     def test_histogram_list_comprehension(self):
-        self.assertEqual(histogram_list_comprehension([2,4,5,6], "o"), 'oo\noooo\nooooo\noooooo')
-        self.assertEqual(histogram_list_comprehension([4,2], "*"), '****\n**')
-        self.assertEqual(histogram_list_comprehension([20,1,12], "H"), 'HHHHHHHHHHHHHHHHHHHH\nH\nHHHHHHHHHHHH')
-        self.assertEqual(histogram_list_comprehension([2,1,2,4,5,2,3], "#"), '##\n#\n##\n####\n#####\n##\n###')
+        self.assertEqual(histogram_list_comprehension(
+            [2, 4, 5, 6], "o"), 'oo\noooo\nooooo\noooooo')
+        self.assertEqual(histogram_list_comprehension([4, 2], "*"), '****\n**')
+        self.assertEqual(histogram_list_comprehension(
+            [20, 1, 12], "H"), 'HHHHHHHHHHHHHHHHHHHH\nH\nHHHHHHHHHHHH')
+        self.assertEqual(histogram_list_comprehension(
+            [2, 1, 2, 4, 5, 2, 3], "#"), '##\n#\n##\n####\n#####\n##\n###')
 
 
 if __name__ == '__main__':
