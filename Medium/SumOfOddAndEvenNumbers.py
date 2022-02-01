@@ -30,12 +30,22 @@ def sum_odd_and_even(lst):
 
     return [even, odd]
 
+
+def sum_odd_and_even_list_comprehension(lst):
+    return [sum([x for x in lst if x %2 == 0]), sum([x for x in lst if x %2 != 0])]
+
 class SumOfOddAndEvenNumbers(unittest.TestCase):
     def test_sum_odd_and_even(self):
         self.assertEqual(sum_odd_and_even([1, 2, 3, 4, 5, 6]), [12, 9])
         self.assertEqual(sum_odd_and_even([-1, -2, -3, -4, -5, -6]), [-12, -9])
         self.assertEqual(sum_odd_and_even([0, 0]), [0, 0])
         self.assertEqual(sum_odd_and_even([]), [0, 0])
+
+    def test_sum_odd_and_even_list_comprehension(self):
+        self.assertEqual(sum_odd_and_even_list_comprehension([1, 2, 3, 4, 5, 6]), [12, 9])
+        self.assertEqual(sum_odd_and_even_list_comprehension([-1, -2, -3, -4, -5, -6]), [-12, -9])
+        self.assertEqual(sum_odd_and_even_list_comprehension([0, 0]), [0, 0])
+        self.assertEqual(sum_odd_and_even_list_comprehension([]), [0, 0])
 
 
 if __name__ == '__main__':
