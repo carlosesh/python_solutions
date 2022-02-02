@@ -49,12 +49,20 @@ class MinimumRemovalsToMakeTwoStringsAnagrams(unittest.TestCase):
         self.assertEqual(min_removals("deafk", "kfeap"), 2)
         self.assertEqual(min_removals("abc", "ghi"), 6)
         self.assertEqual(min_removals("abcxyz", "ghixytz"), 7)
+        self.assertEqual(min_removals("aaaaaa", "bbbbbb"), 12)
+        self.assertEqual(min_removals("", "bbbbbb"), 6)
+        self.assertEqual(min_removals("aaaaaa", ""), 6)
+        self.assertEqual(min_removals("", ""), 0)
 
     def test_min_removals_list_comprehension(self):
         self.assertEqual(min_removals_list_comprehension("abcde", "cab"), 2)
         self.assertEqual(min_removals_list_comprehension("deafk", "kfeap"), 2)
         self.assertEqual(min_removals_list_comprehension("abc", "ghi"), 6)
         self.assertEqual(min_removals_list_comprehension("abcxyz", "ghixytz"), 7)
+        self.assertEqual(min_removals("aaaaaa", "bbbbbb"), 12)
+        self.assertEqual(min_removals("", "bbbbbb"), 6)
+        self.assertEqual(min_removals("aaaaaa", ""), 6)
+        self.assertEqual(min_removals("", ""), 0)
 
 
 if __name__ == '__main__':
