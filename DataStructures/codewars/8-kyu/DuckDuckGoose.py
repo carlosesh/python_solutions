@@ -86,8 +86,10 @@ class DuckDuckGoose(unittest.TestCase):
                 names, random.randint(6, 50))))
             ind = random.randint(5000, 50000)
             ans = ppl[(ind % len(ppl)) - 1].name
-            user_ans = duck_duck_goose_improved(ppl, ind)
+            user_ans = duck_duck_goose(ppl, ind)
+            user_ans_improved = duck_duck_goose_improved(ppl, ind)
             self.assertEqual(user_ans, ans)
+            self.assertEqual(user_ans_improved, ans)
 
 
 if __name__ == '__main__':
