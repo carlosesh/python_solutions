@@ -27,10 +27,6 @@ grid_map(x, lambda x: x.upper())
 """
 
 
-def grid_map_list_comprehension(lst, op):
-    return [[*map(op, x)] for x in lst]
-
-
 def grid_map(inp, op):
     lst_copy = inp.copy()
     res = []
@@ -38,6 +34,10 @@ def grid_map(inp, op):
         res.append(list(map(op, inp[c])))
 
     return res
+
+
+def grid_map_list_comprehension(lst, op):
+    return [[*map(op, x)] for x in lst]
 
 
 def grid_map_cw(inp, op):
