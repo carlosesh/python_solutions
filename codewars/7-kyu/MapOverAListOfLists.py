@@ -31,7 +31,7 @@ def grid_map_list_comprehension(lst, op):
     return [[*map(op, x)] for x in lst]
 
 
-def grid_map_using_map(inp, op):
+def grid_map(inp, op):
     lst_copy = inp.copy()
     res = []
     for c in range(len(lst_copy)):
@@ -40,17 +40,25 @@ def grid_map_using_map(inp, op):
     return res
 
 
+def grid_map_cw(inp, op):
+    return [[op(j) for j in i] for i in inp]
+
+
 class MapOverAListOfLists(unittest.TestCase):
 
     num_grid = [[1, 2, 3, 4], [5, 6, 7, 8, 9], [0, 2, 4]]
     char_grid = [['h', 'E', 'l', 'l', 'O'], ['w', 'O', 'r', 'L', 'd']]
 
+    def test_case1(self):
+        self.assertEqual(grid_map(self.num_grid, lambda x: x + 1),
+                         [[2, 3, 4, 5], [6, 7, 8, 9, 10], [1, 3, 5]])
+
     def test_case2(self):
-        self.assertEqual(grid_map_using_map(self.num_grid, lambda x: x * 2),
+        self.assertEqual(grid_map(self.num_grid, lambda x: x * 2),
                          [[2, 4, 6, 8], [10, 12, 14, 16, 18], [0, 4, 8]])
 
     def test_case3(self):
-        self.assertEqual(grid_map_using_map(self.num_grid, lambda x: x ** 2),
+        self.assertEqual(grid_map(self.num_grid, lambda x: x ** 2),
                          [[1, 4, 9, 16], [25, 36, 49, 64, 81], [0, 4, 16]])
 
     def test_case4(self):
