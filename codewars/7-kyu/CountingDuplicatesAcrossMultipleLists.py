@@ -35,8 +35,14 @@ def count_duplicates(name, age, height):
         return -1
 
 
-def count_duplicates_improved(*args):
-    return len(args[0]) - len(set(zip(*args)))
+def count_duplicates_improved(name, age, height):
+    pull = []
+
+    for i in range(len(name)):
+        if [name[i], age[i], height[i]] not in pull:
+            pull.append([name[i], age[i], height[i]])
+
+    return len(name) - len(pull)
 
 
 class CountingDuplicatesAcrossMultipleLists(unittest.TestCase):
