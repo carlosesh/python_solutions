@@ -31,12 +31,12 @@ def remove_non_repeating_characters_from_lists(list1, list2):
     return removals
 
 
-def remove_non_repeating_characters_from_lists_using_list_comprehension(list1, list2):
-    return [x for x in range(len(list1)) if list1[x] not in list2]
-
-
 def min_removals(txt1, txt2):
     return len(remove_non_repeating_characters_from_lists(txt1, txt2) + remove_non_repeating_characters_from_lists(txt2, txt1))
+
+
+def remove_non_repeating_characters_from_lists_using_list_comprehension(list1, list2):
+    return [x for x in range(len(list1)) if list1[x] not in list2]
 
 
 def min_removals_list_comprehension(txt1, txt2):
