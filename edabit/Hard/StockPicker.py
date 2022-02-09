@@ -29,7 +29,7 @@ stock_picker([80, 60, 10, 8]) ➞ -1
 
 def stock_picker(lst):
     lst_len = len(lst)
-    if lst_len == 0 or lst is None:
+    if lst is None or lst_len == 0:
         return 0
     else:
         profits = []
