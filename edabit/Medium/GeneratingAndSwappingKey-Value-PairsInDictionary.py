@@ -30,14 +30,10 @@ def swap_d(k, v, swapped):
     if k is None or v is None or len(k) != len(v):
         return "No solution, both have to be the same length and/or not be null values"
     else:
-        dict_zipped = dict(zip(k, v))
         if not swapped:
-            return dict_zipped
+            return dict(zip(k, v))
         else:
-            swapped = dict()
-            for key, value in dict_zipped.items():
-                swapped[value] = key
-            return swapped
+            return dict(zip(v, k))
 
 
 class GeneratingAndSwappingKeyValuePairsInDictionary(unittest.TestCase):
