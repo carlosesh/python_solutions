@@ -53,21 +53,24 @@ Notes
 * Graphs may have between 0 and 25,000 nodes.
 * Time Limit: 100 milliseconds.
 """
+
+
 def is_adjacent(matrix, node1, node2):
+    return True if matrix[node1][node2] == 1 else False
 
 
 class FindingAdjacentNodes(unittest.TestCase):
     def test_is_adjacent(self):
         matrix = [[0, 1, 0, 0], [1, 0, 1, 1], [0, 1, 0, 1], [0, 1, 1, 0]]
-        Test.assert_equals(is_adjacent(matrix, 0, 1), True)
-        Test.assert_equals(is_adjacent(matrix, 0, 2), False)
-        Test.assert_equals(is_adjacent(matrix, 2, 1), True)
+        self.assertEqual(is_adjacent(matrix, 0, 1), True)
+        self.assertEqual(is_adjacent(matrix, 0, 2), False)
+        self.assertEqual(is_adjacent(matrix, 2, 1), True)
 
         matrix = [[0, 1, 0, 1, 1], [1, 0, 1, 0, 0], [
             0, 1, 0, 1, 0], [1, 0, 1, 0, 1], [1, 0, 0, 1, 0]]
-        Test.assert_equals(is_adjacent(matrix, 0, 3), True)
-        Test.assert_equals(is_adjacent(matrix, 1, 4), False)
-        Test.assert_equals(is_adjacent(matrix, 3, 2), True)
+        self.assertEqual(is_adjacent(matrix, 0, 3), True)
+        self.assertEqual(is_adjacent(matrix, 1, 4), False)
+        self.assertEqual(is_adjacent(matrix, 3, 2), True)
 
 
 if __name__ == '__main__':
