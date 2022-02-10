@@ -25,7 +25,7 @@ def two_product(lst, n):
     for num in lst:
         complement = n // num
         if complement * num == n and complement in num_list:
-            return sorted([num, complement])
+            return [num, complement] if num < complement else [complement, num]
         else:
             num_list.append(num)
 
