@@ -43,9 +43,10 @@ def encrypt(word):
         'o': 2,
         'u': 3
     }
+
     seen = []
     for i in range(len(word)):
-        if word[i] in encryption.keys() and word[i] not in seen:
+        if word[i] in encryption and word[i] not in seen:
             word = word.replace(word[i], str((encryption.get(word[i]))))
             seen.append(word[i])
 
