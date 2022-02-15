@@ -20,8 +20,7 @@ There is at least one negative integer.
 
 
 def negative_sum(chars):
-    chars = re.findall(r"(-[0-9]*)", chars)
-    return sum(int(x) for x in chars)
+    return sum(int(x) for x in re.findall(r"(-[0-9]*)", chars))
 
 
 class SumOfNegativeIntegers(unittest.TestCase):
