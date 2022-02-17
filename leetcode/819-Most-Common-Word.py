@@ -46,5 +46,6 @@ class Solution:
 
 
 """
-Time/Space Complexity: O(N + M)
+Time Complexity: O(N + M)
+Space Complexity: O(N)
 """
