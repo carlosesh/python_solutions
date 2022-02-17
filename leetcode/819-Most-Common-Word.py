@@ -37,11 +37,10 @@ Constraints:
 class Solution:
     def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
         most_common, filtered_paragraph = defaultdict(
-            int), re.findall(r"[a-zA-Z]+", paragraph)
+            int), re.findall(r"[a-zA-Z]+", paragraph.lower())
         for word in filtered_paragraph:
-            world_lower = word.lower()
-            if world_lower not in banned:
-                most_common[world_lower] += 1
+            if word not in banned:
+                most_common[word] += 1
 
         return max(most_common, key=most_common.get)
 
