@@ -38,8 +38,8 @@ class Solution:
     def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
         most_common, filtered_paragraph = defaultdict(
             int), re.findall(r"[a-zA-Z]+", paragraph.lower())
-        for word in filtered_paragraph:
-            if word not in banned:
+        for i in range(len(filtered_paragraph)):
+            if filtered_paragraph[i] not in banned:
                 most_common[word] += 1
 
         return max(most_common, key=most_common.get)
