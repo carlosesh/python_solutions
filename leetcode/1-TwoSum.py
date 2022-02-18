@@ -60,8 +60,8 @@ class Solution:
                 return [i, hashmap[complement]]
 
     """
-    Time complexity O(n + m):We traverse the list containing n elements exactly
-    once but we also lookup the value in the dictionary.
+    Time complexity O(n):We traverse the list containing n elements exactly
+    once lookup costs O(1).
 
     Space complexity O(n): The extra space required depends on the number of
     items stored in the hash table, which stores exactly nn elements.
