@@ -27,19 +27,16 @@ stock_picker([80, 60, 10, 8]) ➞ -1
 """
 
 
-def stock_picker(lst):
-    lst_len = len(lst)
-    if lst is None or lst_len == 0:
-        return 0
-    else:
-        max_profit = 0
-        for day_x in range(lst_len):
-            for day_y in range(day_x + 1, lst_len):
-                if lst[day_y] > lst[day_x]:
-                    profit = lst[day_y] - lst[day_x]
-                    max_profit = profit if profit > max_profit else max_profit
+def stock_picker(prices):
+    min_price = float('inf')
+    max_profit = 0
+    for i in range(len(prices)):
+        if prices[i] < min_price:
+            min_price = prices[i]
+        elif prices[i] - min_price > max_profit:
+            max_profit = prices[i] - min_price
 
-        return -1 if max_profit == 0 else max_profit
+    return -1 if max_profit == 0 else max_profit
 
 
 class StockPicker(unittest.TestCase):
