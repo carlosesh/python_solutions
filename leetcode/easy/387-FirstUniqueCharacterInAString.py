@@ -24,7 +24,7 @@ Constraints:
 
 
 class Solution:
-    def firstUniqChar(self, s: str) -> int:
+    def firstUniqueChar(self, s: str) -> int:
         s_dict = {}
 
         for i in range(len(s)):
