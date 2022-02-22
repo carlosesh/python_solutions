@@ -6,3 +6,6 @@ Solutions in python for all the problems (attempted) found in [codewars](https:/
 
 # [Leetcode](https://leetcode.com/carlosesh/)
 Solutions in python for all the problems (attempted) found in [leetcode](https://leetcode.com/), for now, I'm only doing the problems related to Data Structures, later on, I will take the other categories.
+
+# [hackerrank](https://www.hackerrank.com/carlosesh)
+Solutions in python for all the problems (attempted) found in [hackerrank](https://www.hackerrank.com), for now, I'm only doing the problems related to Data Structures, later on, I will take the other categories.
