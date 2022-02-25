@@ -1,5 +1,4 @@
 import unittest
-from pprint import pprint
 
 """
 
@@ -45,6 +44,7 @@ class Appointment:
 def populatedict():
     for d in doctors:
         if d not in doctors_dict:
+            #at the end, the range function returns the total of days available, so that you can book 365 days of the year, however, I just chose 7, but it can be modified to something bigger
             days_in_year_dict = {day:[Appointment(day, n + 8, d, None, False) for index, n in enumerate(range(1, 8))] for day in range(7)}
             doctors_dict[d] = days_in_year_dict
 
